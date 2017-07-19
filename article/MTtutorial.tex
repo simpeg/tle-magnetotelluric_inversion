@@ -26,7 +26,7 @@ We will explore the 1D magnetotelluric (MT) survey technique, which is a natural
 \begin{equation}
 \begin{split}
 \nabla \times \vec{E} + i\omega\mu\vec{H} &= 0 \\
-\nabla \times \vec{H} + \sigma\vec{E} &= 0 \\
+\nabla \times \vec{H} - \sigma\vec{E} &= 0 \\
 \text{with boundary conditions}
 \end{split}
 \label{eq:maxwell}
@@ -123,7 +123,7 @@ On the other extreme, we can choose a very small $\beta$, and try to fit all of 
 
 For the inversions shown in Figure \ref{fig:beta_knob}, we prescribed the values the $\alpha_s$, $\alpha_z$. What impact do they have on the character of the model we recover?
 
-In Figure \ref{fig:alphas}, we compare two inversions with different regularization parameters: (1) a ``smooth'' inversion (blue line), with $\alpha_s = 10^{-5}$ and $\alpha_z = 1$, and (2) a ``small'' inversion (brown line): with $\alpha_s = 1$ and $\alpha_z = 10^{-5}$. In both, $\beta$ was chosen so that a desired target misfit was achieved. The smooth inversion penalizes large gradients; the resulting model has two smooth peaks. Note that we smooth over the resistive third layer, over-estimating its conductivity. The ``small'' inversion instead favors models that are close to the reference model; this model has more structure. The resistivity of the first layer matches well (the conductivity of the first layer is equivalent to our reference model) and the conductivity of the third layer is closer to its true value, but additional oscillatory structures are introduced at depth. In the third notebook, you can explore the impact of these parameters yourself!
+In Figure \ref{fig:alphas}, we compare two inversions with different regularization parameters: (1) a ``smooth'' inversion (blue line), with $\alpha_s = 10^{-5}$ and $\alpha_z = 1$, and (2) a ``small'' inversion (orange line): with $\alpha_s = 1$ and $\alpha_z = 10^{-5}$. In both, $\beta$ was chosen so that a desired target misfit was achieved. The smooth inversion penalizes large gradients; the resulting model has two smooth peaks. Note that we smooth over the resistive third layer, over-estimating its conductivity. The ``small'' inversion instead favors models that are close to the reference model; this model has more structure. The resistivity of the first layer matches well (the conductivity of the first layer is equivalent to our reference model) and the conductivity of the third layer is closer to its true value, but additional oscillatory structures are introduced at depth. In the third notebook, you can explore the impact of these parameters yourself!
 
 \begin{figure}[htb!]
     \centering
