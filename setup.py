@@ -33,7 +33,7 @@ setup(
     version="0.0.1",
     packages=find_packages(),
     install_requires=[
-        SimPEG
+        'SimPEG'
     ],
     author="Seogi Kang",
     author_email="skang@eoas.ubc.ca",
