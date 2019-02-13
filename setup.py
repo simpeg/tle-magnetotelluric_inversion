@@ -29,7 +29,7 @@ with open("README.rst") as f:
     LONG_DESCRIPTION = ''.join(f.readlines())
 
 setup(
-    name="tle-magnetotelluric_inversion",
+    name="tleMT",
     version="0.0.1",
     packages=find_packages(),
     install_requires=[
